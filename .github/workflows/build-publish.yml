@@ -27,7 +27,7 @@ jobs:
            JF_ACCESS_TOKEN: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }} 
 
        - name: Set CLI Config
-         run: jf npm-config --global=true --repo-resolve=https://registry.npmjs.org --repo-deploy=$PLATFORM_REPO
+         run: jf npm-config --global=true --repo-resolve=npm --repo-deploy=$PLATFORM_REPO
            
        - name: Install Dependencies
          run: jf npm install
