@@ -11,6 +11,7 @@ jobs:
      runs-on: ubuntu-latest
      env:
       PLATFORM_REPO: 'npm-buildtests-local'
+      RESOLVE_REPO: 'npm-buildtests-remote'
 
      steps:
        - name: Checkout
@@ -27,7 +28,7 @@ jobs:
            JF_ACCESS_TOKEN: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }} 
 
        - name: Set CLI Config
-         run: jf npm-config --global=true --repo-resolve=iq-npmjs-proxy --repo-deploy=$PLATFORM_REPO
+         run: jf npm-config --global=true --repo-resolve=$RESOLVE_REPO --repo-deploy=$PLATFORM_REPO
            
        - name: Install Dependencies
          run: jf npm install
