@@ -30,9 +30,8 @@ jobs:
        - name: Set CLI Config
          run: jf npm-config --global=true --repo-resolve=$RESOLVE_REPO --repo-deploy=$PLATFORM_REPO
        
-       #Purposely bypass package blocking
        - name: Install Dependencies
-         run: npm install
+         run: jf npm install
            
        - name: Run tests
          run: npm test
