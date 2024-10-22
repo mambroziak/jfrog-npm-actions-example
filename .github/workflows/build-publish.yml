@@ -31,7 +31,7 @@ jobs:
          run: jf npm-config --global=true --repo-resolve=$RESOLVE_REPO --repo-deploy=$PLATFORM_REPO
            
        - name: Install Dependencies
-         run: jf npm install
+         run: npm install
            
        - name: Run tests
          run: npm test
