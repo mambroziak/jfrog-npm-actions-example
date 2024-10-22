@@ -47,3 +47,7 @@ jobs:
           jf rt build-add-git
           # Publish build info
           jf rt build-publish
+          
+       - name: build scan
+         run: |            
+          jf build-scan --fail=false
